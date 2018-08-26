@@ -1,0 +1,37 @@
+########################################################
+###FREEMARKER (FreeMarkerAutoConfiguration)
+########################################################
+spring:
+  freemarker:
+    allow-request-override: false
+    cache: true
+    check-template-location: true
+    charset: UTF-8
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+#    prefix: 
+#    request-context-attribute: 
+#    settings:
+    suffix: =.ftl
+    template-loader-path: classpath:/templates/
+    
+########################################################
+###JSP
+########################################################    
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/jsp/
+#      suffix: .jsp
+
+########################################################
+###connect database info
+########################################################
+  datasource:
+    url: jdbc:mysql://localhost:3306/huiyangche?characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 1234
+    
+    
+    

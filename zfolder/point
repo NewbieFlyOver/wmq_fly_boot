@@ -1,0 +1,53 @@
+20180825:
+	1. 用maven创建一个springboot项目，建jar包哦
+	2. 启动方式
+	3. 静态资源的访问,访问的时候省略掉：static、public、resources文件夹的名字
+		在我们开发Web应用的时候，需要引用大量的js、css、图片等静态资源。
+		默认配置
+		Spring Boot默认提供静态资源目录位置需置于classpath下，目录名需符合如下规则：
+		/static
+		/public
+		/resources	
+		/META-INF/resources
+		举例：我们可以在src/main/resources/目录下创建static，在该位置放置一个图片文件。启动程序后，尝试访问http://localhost:8080/D.jpg。如能显示图片，配置成功
+	4. 全局捕获异常
+	5. 使用freemaker(动态页面静态化)模板引擎渲染页面 
+	      好处：提高搜索引擎的收索
+	      注：默认的模板配置路径为：src/main/resources/templates。
+	             在src/main/resources/创建一个templates文件夹,后缀为*.ftl  
+	 
+	6. 创建SpringBoot整合JSP，一定要为war类型，否则会找不到页面报404
+	7. springboot整合使用JdbcTemplate，引入连接数据库依赖时要加版本号，不然报Cannot load driver class: com.mysql.jdbc.Driver
+	8. springboot整合springjpa,对hibernate进行封装
+	注：整合jdbc框架、jpa、mybatis不会有冲突
+	9. springboot整合mybatis
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
+		

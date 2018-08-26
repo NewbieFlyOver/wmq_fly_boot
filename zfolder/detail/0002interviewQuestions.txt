@@ -1,0 +1,18 @@
+
+
+1. springboot的优点：
+	1）敏捷开发（整合框架）
+	2）无需Tomcat(java应用程序运行，实际jar包)，内置Tomcat
+	3）减少xml配置（没有xml）,配置文件properties
+
+
+
+
+
+
+
+
+
+
+
+

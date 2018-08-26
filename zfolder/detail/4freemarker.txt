@@ -1,0 +1,42 @@
+#####################################
+springboot整合freemarker
+#####################################
+1）模板引擎
+		在动态HTML实现上Spring Boot依然可以完美胜任，并且提供了多种模板引擎的默认配置支持，所以在推荐的模板引擎下，我们可以很快的上手开发动态网站。
+		Spring Boot提供了默认配置的模板引擎主要有以下几种：
+		Thymeleaf
+		FreeMarker
+		Velocity
+		Groovy
+		Mustache
+		Spring Boot建议使用这些模板引擎，避免使用JSP，若一定要使用JSP将无法实现Spring Boot的多种特性，具体可见后文：支持JSP的配置
+		当你使用上述模板引擎中的任何一个，它们默认的模板配置路径为：src/main/resources/templates。当然也可以修改这个路径，具体如何修改，可在后续各模板引擎的配置属性中查询并修改。
+	2）依赖jar包：
+		<!-- 引入freeMarker的依赖包. -->
+		<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+	3）在src/main/resources/创建一个templates文件夹,后缀为*.ftl
+	4）freemarker配置文件：
+		########################################################
+		###FREEMARKER (FreeMarkerAutoConfiguration)
+		########################################################
+		spring.freemarker.allow-request-override=false
+		spring.freemarker.cache=true
+		spring.freemarker.check-template-location=true
+		spring.freemarker.charset=UTF-8
+		spring.freemarker.content-type=text/html
+		spring.freemarker.expose-request-attributes=false
+		spring.freemarker.expose-session-attributes=false
+		spring.freemarker.expose-spring-macro-helpers=false
+		#spring.freemarker.prefix=
+		#spring.freemarker.request-context-attribute=
+		#spring.freemarker.settings.*=
+		spring.freemarker.suffix=.ftl
+		spring.freemarker.template-loader-path=classpath:/templates/
+		#comma-separated list
+		#spring.freemarker.view-names= # whitelist of view names that can be resolved
+
+
+

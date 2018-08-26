@@ -1,0 +1,20 @@
+#####################################
+修改时间：20180826
+#####################################
+01. 创建springboot项目时,如何选择jar或war类型
+
+1. wmq.connecteDataSource：
+	springboot整合jdbc、jpa和mybatis对数据库的操作
+	
+2. wmq.exceptionHandler:
+	springboot整合了全局异常处理
+	
+3. springboot中静态资源访问	
+
+4. wmq.freemarke
+	springboot中整合freemaker模板:
+	
+	
+	
+	
+	

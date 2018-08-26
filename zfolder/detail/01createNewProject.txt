@@ -1,0 +1,55 @@
+#####################################
+修改时间：20180826
+内容：新建项目
+#####################################
+1. 用maven新建springboot项目，使用jar类型。
+	jar运行原理参考：https://blog.csdn.net/hengyunabc/article/details/50120001
+	注：
+		打成的JAR包与传统JAR包的不同之处在于里面有一个名为lib的目录，在这个目录中包含了这个简单应用所依赖的其他JAR包，其中也包含
+	内置的嵌 入式Tomcat，正是使用它，才能发布服务和访问Web资源。
+		如果要将最终的打包形式改为WAR的话，还需要对pom.xml文件进行修改，除了需要将packaging的值修改为war以外，还需要对依赖进行适
+	当的配置。删除spring-boot-starter-web和spring-boot-starter-tomcat依赖，需要添加tomcat-servlet-api，在这里将其scope属性设置
+	为provided，这样在最终形成的WAR中不会包含这个JAR包，因为Tomcat或Jetty等服务器在运行时将 会提供相关的API类。
+
+2. springboot整合jsp时，新建spring项目要使用war类型。否则会找不到页面报404
+	2.1 springboot默认不支持jsp，需要导入一下3个包：
+	<!-- 支持jsp的jar包 -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+	2.2 application.yml配置文件中，添加jsp视图配置，：
+		  mvc:
+		   view:
+		      prefix: /WEB-INF/jsp/
+		      suffix: .jsp
+	2.3 jsp项目为什么需建war类型的
+		个人认为.jsp文件---》.java---》.class, 而jar打包的时候都是.class，springboot并没有做对.jsp的处理。
+		JSP执行过程：
+		1）首先，客户端发出请求(request )，请求访问JSP网页
+		
+		2）接着，JSP Container将要访问的.JSP文件 转译成Servlet的源代码（.java文件）
+		
+		3）然后，将产生的Servlet的源代码（.java文件）经过编译，生成.class文件，并加载到内存执行
+		
+		4）最后把结果响应(response)给客户端
+
+
+
+
+
+
+
+
+
