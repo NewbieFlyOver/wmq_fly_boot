@@ -2,19 +2,19 @@
 ###FREEMARKER (FreeMarkerAutoConfiguration)
 ########################################################
 spring:
-  freemarker:
-    allow-request-override: false
-    cache: true
-    check-template-location: true
-    charset: UTF-8
-    expose-request-attributes: false
-    expose-session-attributes: false
-    expose-spring-macro-helpers: false
+#  freemarker:
+#    allow-request-override: false
+#    cache: true
+#    check-template-location: true
+#    charset: UTF-8
+#    expose-request-attributes: false
+#    expose-session-attributes: false
+#    expose-spring-macro-helpers: false
 #    prefix: 
 #    request-context-attribute: 
 #    settings:
-    suffix: =.ftl
-    template-loader-path: classpath:/templates/
+#    suffix: =.ftl
+#    template-loader-path: classpath:/templates/
     
 ########################################################
 ###JSP

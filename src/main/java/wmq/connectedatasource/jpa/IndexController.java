@@ -12,7 +12,7 @@ public class IndexController {
 	@Autowired
 	private UserDao userDao;
 	
-	@RequestMapping("/index")
+	@RequestMapping("/jpaIndex")
 	public Object index(Integer id) {
 		User findUser = userDao.findOne(id);
 		System.out.println(findUser.getName());
